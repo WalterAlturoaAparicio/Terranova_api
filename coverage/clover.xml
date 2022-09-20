@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1663683678401" clover="3.2.0">
-  <project timestamp="1663683678401" name="All files">
-    <metrics statements="164" coveredstatements="158" conditionals="34" coveredconditionals="30" methods="36" coveredmethods="32" elements="234" coveredelements="220" complexity="0" loc="164" ncloc="164" packages="5" files="13" classes="13"/>
+<coverage generated="1663685027280" clover="3.2.0">
+  <project timestamp="1663685027280" name="All files">
+    <metrics statements="167" coveredstatements="161" conditionals="36" coveredconditionals="31" methods="36" coveredmethods="32" elements="239" coveredelements="224" complexity="0" loc="167" ncloc="167" packages="5" files="13" classes="13"/>
     <package name="src">
       <metrics statements="35" coveredstatements="33" conditionals="3" coveredconditionals="2" methods="8" coveredmethods="7"/>
       <file name="index.ts" path="C:\Users\Usuario\Desktop\pruebas\terranova_api\src\index.ts">
@@ -188,7 +188,7 @@
       </file>
     </package>
     <package name="src.shared">
-      <metrics statements="21" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="5"/>
+      <metrics statements="24" coveredstatements="22" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="5"/>
       <file name="base.router.ts" path="C:\Users\Usuario\Desktop\pruebas\terranova_api\src\shared\base.router.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -213,11 +213,14 @@
         <line num="43" count="0" type="stmt"/>
       </file>
       <file name="swagger.ts" path="C:\Users\Usuario\Desktop\pruebas\terranova_api\src\shared\swagger.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
       </file>
     </package>
   </project>
