@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { HttpResponse } from "../shared/http.response";
-import * as StatService from "../stat/stat.service";
+import { HttpResponse } from "../../shared/http.response";
+import * as StatService from "./stat.service";
 
 export class StatController {
   constructor(
     private readonly httpResponse: HttpResponse = new HttpResponse()
   ) {}
   public async getStats(_req: Request, res: Response) {
-    try {
+    try { 
       const finalStat = await StatService.getFinalStats();
       return this.httpResponse.Ok(res, finalStat);
     } catch (error) {

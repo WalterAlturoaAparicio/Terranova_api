@@ -1,7 +1,7 @@
 import { ContainerEntity } from "./container.entity";
-import { container } from "./container.interface";
+import { containerInput } from "./container.interface";
 
-export function getKpi(containers: container[], budget: number) {
+export function getKpi(containers: containerInput[], budget: number) {
   const bestKpi = [];
   const others = [];
 
@@ -9,9 +9,10 @@ export function getKpi(containers: container[], budget: number) {
   for (const container of containers) {
     if (budget - container.transportCost >= 0) {
       budget -= container.transportCost;
-      bestKpi.push(container);
+
+      bestKpi.push(convertIntoContainer(container));
     } else {
-      others.push(container);
+      others.push(convertIntoContainer(container));
     }
   }
   return [bestKpi, others];
@@ -21,6 +22,14 @@ export async function createContainers(
   containers: ContainerEntity[]
 ): Promise<ContainerEntity[]> {
   return ContainerEntity.bulkCreate(containers);
+}
+export function convertIntoContainer(container: any) {
+  const { name, transportCost, containerPrice } = container;
+  return {
+    name,
+    transportCost,
+    containerPrice,
+  };
 }
 
 export function validContainer(container: any) {
